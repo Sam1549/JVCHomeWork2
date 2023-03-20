@@ -23,7 +23,7 @@ public class Main {
                 .count();
 
         List<String> listForArmy = persons.stream()
-                .filter(person -> person.getAge() > 18)
+                .filter(person -> person.getAge() >= 18)
                 .filter(person -> person.getAge() < 27)
                 .map(person -> person.getFamily())
                 .collect(Collectors.toList());
